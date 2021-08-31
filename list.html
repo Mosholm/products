@@ -23,7 +23,6 @@
             </ul>
         </nav>
 
-
     </header>
 
     <main>
@@ -38,87 +37,72 @@
 
         <div class="itemList">
 
-            <article class="item">
+
+            <template id="basicProductTemplate">
+
+                <article class="item">
+                    <h1 class=productName>Product name</h1>
+                    <p class="Brand">Brand</p>
+
+                    <div class="newPrice">
+                        <p class="price">100kr</p>
+                        <p class="discount"> 50kr</p>
+                    </div>
+
+                    <p class="soldOutMark">Sold out</p>
+
+                    <p class="percent">50%</p>
+                    <img class="smallImage" src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp"
+                        alt="Product image">
+                </article>
+            </template>
+
+            <!-- <article class="item sale">
                 <h1 class=productName>Product name</h1>
-                <p class="Brand">Brand</p>
+                    <p class="Brand">Brand</p>
 
-                <p class="price">100kr</p>
-                <p hidden class="discount"> 50kr</p>
+                    <div class="newPrice">
+                        <p class="price">100kr</p>
+                        <p class="discount"> 50kr</p>
+                    </div>
 
+                    <p class="soldOutMark">Sold out</p>
 
-                <p hidden class="soldOut">Sold out</p>
-
-                <p hidden class="sale">50%</p>
-                <img src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp" alt="Product image">
+                    <p class="percent">50%</p>
+                    <img class="smallImage" src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp" alt="Product image">
             </article>
 
-
-            <article class="item Sale">
+            <article class="item sale soldOut">
                 <h1 class=productName>Product name</h1>
-                <p class="Brand">Brand</p>
+                    <p class="Brand">Brand</p>
 
-                <div class="newPrice">
-                    <p class="price">100kr</p>
-                    <p class="discount"> 50kr</p>
-                </div>
+                    <div class="newPrice">
+                        <p class="price">100kr</p>
+                        <p class="discount"> 50kr</p>
+                    </div>
 
-                <p hidden class="soldOut">Sold out</p>
+                    <p class="soldOutMark">Sold out</p>
 
-                <p class="sale">50%</p>
-                <img src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp" alt="Product image">
+                    <p class="percent">50%</p>
+                    <img class="smallImage" src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp" alt="Product image">
             </article>
 
             <article class="item soldOut">
                 <h1 class=productName>Product name</h1>
-                <p class="Brand">Brand</p>
+                    <p class="Brand">Brand</p>
 
-                <p hidden class="price">100kr</p>
-                <p hidden class="discount"> 50kr</p>
-                <p class="soldOut">Sold out</p>
-                <p hidden class="sale">50%</p>
-                <img src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp" alt="Product image">
+                    <div class="newPrice">
+                        <p class="price">100kr</p>
+                        <p class="discount"> 50kr</p>
+                    </div>
+
+                    <p class="soldOutMark">Sold out</p>
+
+                    <p class="percent">50%</p>
+                    <img class="smallImage" src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp" alt="Product image">
             </article>
+ -->
 
-            <article class="item Sale">
-                <h1 class=productName>Product name</h1>
-                <p class="Brand">Brand</p>
-
-                <div class="newPrice">
-                    <p class="price">100kr</p>
-                    <p class="discount"> 50kr</p>
-                </div>
-
-                <p hidden class="soldOut">Sold out</p>
-
-                <p class="sale">50%</p>
-                <img src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp" alt="Product image">
-            </article>
-
-            <article class="item">
-                <h1 class=productName>Product name</h1>
-                <p class="Brand">Brand</p>
-
-                <p class="price">100kr</p>
-                <p hidden class="discount"> 50kr</p>
-
-
-                <p hidden class="soldOut">Sold out</p>
-
-                <p hidden class="sale">50%</p>
-                <img src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp" alt="Product image">
-            </article>
-
-
-            <article class="item soldOut">
-                <h1 class=productName>Product name</h1>
-                <p class="Brand">Brand</p>
-
-                <p hidden class="price">100kr</p>
-                <p hidden class="discount"> 50kr</p>
-                <p class="soldOut">Sold out</p>
-                <p hidden class="sale">50%</p>
-                <img src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp" alt="Product image">
-            </article>
 
         </div>
     </main>
@@ -139,6 +123,7 @@
 
     </footer>
 
+    <script src="js/productList.js"></script>
 </body>
 
 </html>

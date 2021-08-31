@@ -52,7 +52,7 @@ a:visited {
 }
 
 a:hover {
-  color: rgb(172, 54, 162);
+  color: rgb(42, 44, 24);
   opacity: 0.8;
   text-decoration: underline;
 }
@@ -145,22 +145,14 @@ footer {
 }
 .item h1 {
   line-height: 0;
+  font-size: 1.1rem;
 }
 .item p {
   line-height: 1.2rem;
   margin: 0;
 }
 
-.newPrice {
-  display: flex;
-  gap: 2rem;
-}
-
-.newPrice .price {
-  text-decoration: line-through;
-}
-
-.sale {
+.percent {
   align-self: flex-end;
   font-size: 1.5rem;
   position: absolute;
@@ -168,8 +160,35 @@ footer {
   background-color: rgb(248, 243, 233);
 }
 
-.soldOut {
+.itemList article.sale .newPrice {
+  display: flex;
+  gap: 2rem;
+}
+
+.itemList article.sale .newPrice .price {
+  text-decoration: line-through;
+}
+
+.itemList article.soldOut {
   opacity: 0.6;
+}
+
+.itemList article.soldOut .newPrice {
+  display: none;
+}
+
+.itemList article .percent,
+.itemList article .discount,
+.itemList article .soldOutMark {
+  display: none;
+}
+.itemList article.sale .percent,
+.itemList article.sale .discount {
+  display: initial;
+}
+
+.itemList article.soldOut .soldOutMark {
+  display: initial;
 }
 
 .product {
