@@ -14,16 +14,17 @@ function handleProductList(data) {
 }
 
 function showProduct(product) {
-  const template = document.querySelector("#basicProductTemplate").content;
+  console.log(product);
+  const template = document.querySelector("template").content;
   const copy = template.cloneNode(true);
 
+  copy.querySelector("a").setAttribute("href", "product.html?id=" + product.id);
   copy.querySelector(".Brand").textContent = `${product.brandname}`;
   copy.querySelector(
     ".productName"
   ).textContent = `${product.productdisplayname}`;
   copy.querySelector(".price").textContent = `${product.price} Kr`;
   copy.querySelector(".percent").textContent = `${product.discount}%`;
-
   copy.querySelector(
     "img.smallImage"
   ).src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
