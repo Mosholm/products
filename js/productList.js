@@ -35,7 +35,6 @@ function showProduct(product) {
 
   if (product.discount) {
     copy.querySelector("article").classList.add("sale");
-
     copy.querySelector(".discount").textContent = `${
       product.price - (product.discount / 100) * product.price
     } Kr`;
