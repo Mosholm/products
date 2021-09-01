@@ -14,15 +14,29 @@
 
 <body>
     <header>
+
         <nav>
-            <ul>
-                <li><a href="category.html">Category</a></li>
-                <li><a href="product.html">Product</a></li>
-                <li><a href="list.html">List</a></li>
+            <a href="list.html?products">All products</a>
+
+            <a class="logo" href="index.html">My Shop Site</a>
+           
+                <a href="list.html">About</a>
+         
+            
+            <ul class="seasons">
+                <li><a href="list.html?season=winter">Winter</a></li>
+                <li><a href="list.html?season=spring">Spring</a></li>
+                <li><a href="list.html?season=summer">Summer</a></li>
+                <li><a href="list.html?season=fall">Fall</a></li>
             </ul>
+
+
+
+
+
         </nav>
 
-        <div class="logo"><a href="index.html">My shop</a></div>
+
     </header>
 
     <main>
@@ -32,21 +46,18 @@
         </div>
 
         <div class="categoryList">
-            <template>
-
-                <ol class="category">
-
-                    <li class="accessories"><a href="accessories">Accessories</a></li>
-                    <!-- <li class="apparel"><a href="apparel">Apparel</a></li>
-                <li class="footwear"><a href="footwear">Footwear</a></li>
-                <li class="freeItems"><a href="freeItems">Free Items</a></li>
-                <li class="personalCare"><a href="personalCare">Personal Care</a></li>
-                <li class="sportingGoods"><a href="sportingGoods">Sporting Goods</a></li> -->
 
 
-                </ol>
+            <ol class="category">
 
-            </template>
+                <li><a href="list.html?category=apparel">Apparel</a></li>
+                <li><a href="list.html?category=Footwear">Footwear</a></li>
+                <li><a href="list.html?category=accessories">Accessories</a></li>
+                <li><a href="list.html?category=Free Items">Free Items</a></li>
+                <li><a href="list.html?category=Personal Care">Personal Care</a></li>
+                <li><a href="list.html?category=Sporting Goods">Sporting Goods</a></li>
+            </ol>
+
 
         </div>
     </main>

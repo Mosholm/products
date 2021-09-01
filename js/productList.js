@@ -1,6 +1,31 @@
-const url = "https://kea-alt-del.dk/t7/api/products";
+console.log("hi mom");
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get("category");
+const season = urlParams.get("season");
+const all = urlParams.get("all");
+
+const url =
+  "https://kea-alt-del.dk/t7/api/products?limit=60&category=" + category;
+const url1 = "https://kea-alt-del.dk/t7/api/products?limit=60&season=" + season;
+const url2 = "https://kea-alt-del.dk/t7/api/products?limit=60";
 
 fetch(url)
+  .then(function (res) {
+    return res.json();
+  })
+  .then(function (data) {
+    handleProductList(data);
+  });
+
+fetch(url1)
+  .then(function (res) {
+    return res.json();
+  })
+  .then(function (data) {
+    handleProductList(data);
+  });
+
+  fetch(url2)
   .then(function (res) {
     return res.json();
   })
