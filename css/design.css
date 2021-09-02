@@ -1,45 +1,65 @@
+:root {
+  /* Color Theme Swatches in RGBA */
+  --color-hotred: rgba(242, 24, 4, 1);
+  --color-lightred: rgba(242, 111, 99, 1);
+  --color-red: rgba(165, 3, 3, 1);
+  --color-lightgrey: rgba(242, 242, 242, 1);
+  --color-grey: rgba(165, 165, 165, 1);
+}
+
+/* font-family: 'Antic Didone', serif; */
+
+/* font-weight - 100/200
+font-family: 'Fraunces', serif; */
+
+/* Regular 400Medium 500Semi-bold 600Semi-bold 600 italicBold 700Bold 700 italicBlack 900
+font-family: 'Montserrat', sans-serif; */
+
 html {
   margin: 0;
   padding: 0%;
 }
 
 body {
+  color: var(--color-hotred);
+  background-color: var(--color-lightgrey);
   margin: 0;
   padding: 0%;
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
 header {
   position: fixed;
   top: 0;
   width: 100%;
+  height: auto;
   overflow: hidden;
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   z-index: 10;
-  background-color: rgba(255, 255, 255, 0.7);
+  background: var(--color-lightgrey);
 }
 
 nav {
-  margin: 2%;
+  margin: 1%;
   padding: 0%;
   justify-self: center;
   width: 90%;
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
+  text-transform: uppercase;
 }
 
 nav a {
   justify-self: center;
-  text-transform: uppercase;
-  font-weight: 600;
+  align-self: center;
 }
 
 main {
   position: relative;
-  top: 7vw;
+  top: 7rem;
   margin-left: 10vw;
   margin-right: 10vw;
   margin-bottom: 10vw;
@@ -56,8 +76,10 @@ li {
 }
 
 .logo {
-  font-family: Nanum Myeongjo, serif;
-  font-size: 2rem;
+  font-family: "Antic Didone", serif;
+  font-family: "Fraunces", serif;
+  font-weight: 200;
+  font-size: 5rem;
   text-transform: uppercase;
 }
 
@@ -71,22 +93,20 @@ nav ul {
   list-style: none;
   text-align: center;
   margin-right: 2vw;
-  text-transform: uppercase;
 }
 
 a:link,
 a:visited {
-  color: rgb(42, 44, 24);
+  color: var(--color-hotred);
 }
 
 a:hover {
-  color: rgb(42, 44, 24);
-  opacity: 0.8;
+  color: var(--color-lightred);
   text-decoration: underline;
 }
 
 a:active {
-  color: blue;
+  color: var(--color-hotred);
 }
 
 a:link,
@@ -96,71 +116,30 @@ a:active {
   text-decoration: none;
 }
 
-h1 {
-  font-family: "Nanum Gothic", sans-serif;
-}
-
 footer {
   position: relative;
+  margin: 0;
   font-size: 0.8rem;
-  left: 7vw;
-  bottom: 2vw;
- width: 50%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 7rem;
+  background: var(--color-red);
 }
-footer li {
-  margin-left: 3vw;
+footer ul {
+  align-self: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-style: italic;
 }
 
+footer li {
+  margin-left: 3vw;
+  color: var(--color-lightgrey);
+}
 
 .headerImg {
   height: 7vw;
-}
-
-.dropbtn {
-  border: none;
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
 }
 
 .headerImg h1 {
@@ -174,27 +153,31 @@ footer li {
   padding-bottom: 5vw;
 }
 
-.category {
-  padding-top: 3vw;
+.categoryList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
+.categoryList h1 {
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  font-style: italic;
+  color: var(--color-lightred);
+}
 .category a {
   font-size: 2rem;
-  line-height: 4rem;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
-.category a:link {
-  color: rgb(42, 44, 24);
-}
-
+.category a:link,
 .category a:visited {
-  color: rgb(42, 44, 24);
-  opacity: 0.8;
+  color: var(--color-hotred);
 }
 
 .category a:hover {
-  color: rgb(42, 44, 24);
-  opacity: 0.8;
+  color: var(--color-lightred);
   text-decoration: underline;
 }
 
@@ -210,11 +193,12 @@ footer li {
   display: flex;
   flex-direction: column;
   border-radius: 2px;
+  text-transform: uppercase;
   /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
 }
 
 .item:hover {
-  opacity: 0.6;
+  border: var(--color-hotred) 3px solid;
 }
 
 .item img {
@@ -226,49 +210,63 @@ footer li {
 }
 .item h1 {
   line-height: 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .item p {
   line-height: 1.2rem;
   margin: 0;
+  font-size: 0.8rem;
 }
 
-.percent {
+.item .percent {
   align-self: flex-end;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+  margin: 1rem;
   position: absolute;
   padding: 1rem;
-  background-color: rgb(248, 243, 233);
+  background-color: var(--color-lightgrey);
+  font-family: "Fraunces", serif;
 }
 
-.itemList article.sale .newPrice {
+.productInfo .percent {
+  align-self: flex-end;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.itemList article.sale .newPrice,
+.product .productInfo.sale .newPrice {
   display: flex;
   gap: 2rem;
 }
 
-.itemList article.sale .newPrice .price {
+.itemList article.sale .newPrice .price,
+.product .productInfo.sale .newPrice .price {
   text-decoration: line-through;
 }
 
-.itemList article.soldOut {
+.itemList article.soldOut,
+.product .productInfo.soldOut {
   opacity: 0.6;
 }
 
-.itemList article.soldOut .newPrice {
-  display: none;
-}
-
+.itemList article.soldOut .newPrice,
+.product .productInfo.soldOut .newPrice,
 .itemList article .percent,
 .itemList article .discount,
-.itemList article .soldOutMark {
+.itemList article .soldOutMark,
+.product .productInfo .percent,
+.product .productInfo .discount,
+.product .productInfo .soldOutMark {
   display: none;
 }
 .itemList article.sale .percent,
-.itemList article.sale .discount {
-  display: initial;
-}
-
-.itemList article.soldOut .soldOutMark {
+.itemList article.sale .discount,
+.itemList article.soldOut .soldOutMark,
+.product .productInfo.sale .percent,
+.product .productInfo.sale .discount,
+.product .productInfo.soldOut .soldOutMark {
   display: initial;
 }
 
@@ -277,7 +275,9 @@ footer li {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 3vw;
   padding-bottom: 3vw;
+  padding-top: 7rem;
 }
+
 .product img {
   max-width: 100%;
   order: -1;
@@ -287,29 +287,39 @@ footer li {
 .productInfo {
   align-self: center;
   justify-self: center;
-  line-height: 0.9rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
 }
 
 button,
 select {
-  padding: 0.5em 1.7em;
+  padding: 0.5rem 1rem;
   margin: 1em 0.1em 0.1em 0;
-  border: 0.16em solid rgba(42, 44, 24, 0);
-  background-color: rgb(248, 243, 233);
-  border-radius: 0.5em;
+  border: 0.16em solid var(--color-lightgrey);
+  background-color: var(--color-lightgrey);
+  border-radius: 0.1em;
   text-decoration: none;
-  color: rgb(42, 44, 24);
+  color: var(--color-hotred);
   text-align: center;
   transition: all 0.2s;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-family: "Fraunces", serif;
+  font-style: italic;
 }
 
 button:hover,
 select:hover {
-  border-color: rgb(255, 255, 255);
+  border-color: var(--color-hotred);
 }
 
 .purchase {
   display: flex;
   flex-direction: column;
+  font-family: "Fraunces", serif;
+}
+
+.description {
+  margin-top: 3rem;
+  padding-bottom: 3rem;
 }

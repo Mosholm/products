@@ -3,11 +3,13 @@ const urlParams = new URLSearchParams(window.location.search);
 const category = urlParams.get("category");
 const season = urlParams.get("season");
 const all = urlParams.get("all");
+const brands = urlParams.get("brandname");
 
 const url =
   "https://kea-alt-del.dk/t7/api/products?limit=60&category=" + category;
 const url1 = "https://kea-alt-del.dk/t7/api/products?limit=60&season=" + season;
 const url2 = "https://kea-alt-del.dk/t7/api/products?limit=60";
+const url3 = "https://kea-alt-del.dk/t7/api/products?brandname=" + brands;
 
 fetch(url)
   .then(function (res) {
@@ -25,7 +27,15 @@ fetch(url1)
     handleProductList(data);
   });
 
-  fetch(url2)
+fetch(url2)
+  .then(function (res) {
+    return res.json();
+  })
+  .then(function (data) {
+    handleProductList(data);
+  });
+
+fetch(url3)
   .then(function (res) {
     return res.json();
   })
