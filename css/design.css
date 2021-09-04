@@ -8,10 +8,8 @@
 }
 
 /* font-family: 'Antic Didone', serif; */
-
 /* font-weight - 100/200
 font-family: 'Fraunces', serif; */
-
 /* Regular 400Medium 500Semi-bold 600Semi-bold 600 italicBold 700Bold 700 italicBlack 900
 font-family: 'Montserrat', sans-serif; */
 
@@ -59,7 +57,7 @@ nav a {
 
 main {
   position: relative;
-  top: 7rem;
+  top: 9rem;
   margin-left: 10vw;
   margin-right: 10vw;
   margin-bottom: 10vw;
@@ -130,7 +128,6 @@ footer ul {
   align-self: center;
   text-transform: uppercase;
   font-weight: 600;
-  font-style: italic;
 }
 
 footer li {
@@ -142,20 +139,21 @@ footer li {
   height: 7vw;
 }
 
-.headerImg h1 {
-  margin: 1vw;
-  padding: 5vw;
-  padding-bottom: 0%;
-}
-.headerImg p {
-  margin-left: 20%;
-  margin-right: 20%;
-  padding-bottom: 5vw;
-}
 
 .categoryList {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.categoryList * {
+  justify-self: start;
+  margin-left: 1rem;
+}
+
+ol{
+  padding: 0;
 }
 
 .categoryList h1 {
@@ -166,7 +164,7 @@ footer li {
 }
 .category a {
   font-size: 2rem;
-  line-height: 2.5rem;
+  line-height: 2.7rem;
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -194,7 +192,6 @@ footer li {
   flex-direction: column;
   border-radius: 2px;
   text-transform: uppercase;
-  /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
 }
 
 .item:hover {
@@ -279,9 +276,11 @@ footer li {
 }
 
 .product img {
-  max-width: 100%;
+  max-width: 80%;
   order: -1;
   position: relative;
+  justify-self: end;
+
 }
 
 .productInfo {
@@ -289,6 +288,7 @@ footer li {
   justify-self: center;
   line-height: 1.5rem;
   text-transform: uppercase;
+  word-wrap: break-word;
 }
 
 button,
@@ -322,4 +322,37 @@ select:hover {
 .description {
   margin-top: 3rem;
   padding-bottom: 3rem;
+}
+
+@media only screen and (max-width: 1020px) {
+  .logo {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .logo {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  nav {
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  nav a:first-child {
+    order: 4;
+  }
+
+  .categoryList {
+    justify-content: center;
+    gap: 0;
+  }
+
+  footer ul {
+    flex-direction: column;
+  }
 }

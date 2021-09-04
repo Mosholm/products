@@ -39,4 +39,3 @@ function showProduct(product) {
 function goBack() {
   window.history.back();
 }
-//productlist list --> template--> clone--> link to productlist page
